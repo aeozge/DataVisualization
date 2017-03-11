@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+var s =0;
+
+function artir(){
+   deger= document.getElementById("sayi");
+   deger.value=s;
+   s++;
+}
+ 
+function azalt(){
+   deger= document.getElementById("sayi");
+   deger.value=s;
+  s--;
+}
+</script>
+ 
+
+ <script language="javascript" type="text/javascript">
+ function subtraction(){
+ 	a=Number(document.calculator.number1.value);
+ 	b=Number(document.calculator.number2.value);
+ 	c=a-b;
+ 	document.calculator.total.value=c;
+ }
+ </script>
+
+<script language="javascript" type="text/javascript">
+function multiplication(){
+		a=Number(deger.value);
+ 	b=Number(document.calculator.price.value);
+ 	c=a*b;
+ 	document.calculator.number2.value=c;
+}
+
+</script>
+
+<script language="javascript" type="text/javascript">
+function addtext() {
+    var newtext = document.calculator.number1.value;
+
+    if(document.calculator.checked)
+     {
+        document.calculator.cikantext.value = "";
+        }
+    document.calculator.cikantext.value += newtext;
+}
+</script>
+
+
+
+
+</head>
+<body>
+
+<button type="button" onclick="azalt()">-</button>
+<input type="text" value="0" size="5" id="sayi" name="sayi">
+<button type="button" onclick="artir()">+</button>
+
+
+<form name="calculator" action="myphp.php" method="post">
+
+Initial Budget : <input type="text" name="number1" checked />
+ 
+  
+  <input type="reset" value="Delete" />
+  <input type="button" value="Set" onclick="addtext();"><br>
+
+
+<div style="width: 50%; float: right;">
+
+Initial Budget : <input type="text" name="cikantext" ><br>
+Total Expenses : <input type="text" name="number2"><br>
+Remaining Budget : <input type="text" name="total"><br>
+
+
+Price Tag(Other) : <input type="text" name="price"><br>
+
+<input type="button" value="Sub" onclick="javascript:subtraction();">
+<input type="button" value="Mul" onclick="javascript:multiplication();">
+
+</div>
+
+</form>
+
+
+
+
+
+
+</body>
+</html>
